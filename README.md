@@ -1,2 +1,2 @@
-# seminaire_web
-Website for séminaire consultants
+# project_par
+Markowitz portfolio simulation in Django

@@ -1,0 +1,230 @@
+body{
+    
+}
+footer{
+    font-family: 'Karma', serif;
+    background-image: url("images/test.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 20em;
+    text-align:left;
+    height: 20em;
+    width=100%;
+    font-size: 1.5em;
+    color:white;
+    font-weight: bold;
+}
+footer p{
+    position:relative;
+    top:40%;
+    margin-top: 4em;
+    text-align: center;
+}
+
+
+.sidebar-nav {
+    font-family: 'Karma', serif;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+.sidebar-nav li{
+	list-style-type:none;
+}
+.sidebar-nav{
+    font-size:1.2em;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.sidebar-nav a{
+    display:inline-block;
+    text-decoration: none;
+    width:100%;
+    border: 2px solid #e65c00;
+    border-radius: 3px;
+    text-align:center; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+	text-decoration: none;
+    background-color:#e65c00;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 2px black;
+}
+.userme{
+    display: inline-block;
+    text-align: center;
+    width:200px;
+    padding: 10px;
+    text-shadow:0.5px 0.5px 0.5px black; 
+    font-size: 1.2em;
+    position: absolute;
+    bottom: -2em;
+    left:0;
+}
+.userme em{
+    color:#66ccff;
+    font-weight: bold;
+    font-style: normal;
+    text-shadow:0.5px 0.5px 0.5px black; 
+}
+label{
+    color: #6699ff;
+}
+.userme strong{
+    color: #6699ff;
+}
+.sidebar-nav  a:hover,a:focus{
+  background-color:white;
+  color:#e65c00;
+}
+
+.col-sm-10 {
+    margin-top: 2%;
+    font-family: 'Karma', serif;
+    display:inline-block;
+    border-left: 1px solid #6699ff;
+    font-size:1.2em;
+}
+.col-sm-10 h1{
+    margin-top: 0;
+    font-weight: bold;
+    display: inline-block;
+    width:100%;
+	background-image: url("images/5-0_finance_1600.jpg");
+	background-repeat: no-repeat;
+    background-size: 100% 5em;
+    text-align:center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    border: 4px solid #66ccff;
+    color:  #66ccff;
+    font-size: 3em;
+    text-shadow: 2px 2px 2px black;
+    
+}
+.col-sm-10 h2{
+    background-color: #6699ff;
+    color:white;
+    width: 100%;
+}
+hr{
+    border: 4px solid #66ccff;
+    box-shadow: 1px 1px 1px black;
+}
+li{
+    list-style-type:none;
+}
+.col-sm-10 p a{
+    background-color: #6699ff;
+    color:white;
+    padding:1em;
+    width=100%;
+    padding:1em;
+    margin-bottom: 4em;
+}
+
+.col-sm-10 p a:hover, .col-sm-10 p a:focus{
+     background-color: red;
+    text-decoration: none;
+}
+.col-sm-10 ul li a{
+    display:inline-block;
+    background-color: #6699ff;
+    color:white;
+    width:100%;
+    padding: 5px;
+    margin: 1em 0 auto;
+    font-size: 1.3em;
+    border: 3px solid #6699ff;
+}
+.col-sm-10 ul li a:hover,.col-sm-10 ul li a:focus{
+    background-color: white;
+    color:#6699ff;
+    border: 3px solid #6699ff;
+    text-decoration: none;
+}
+.col-sm-10 ul{
+    -webkit-margin-before: 0em;
+    -webkit-padding-start: 0px;
+}
+h4{
+    color: red;
+    font-weight: bold;
+}
+table {
+  
+  width: 100%;
+  
+}
+th{
+    color: #6699ff;
+}
+form label{
+    width:30%;
+}
+form label{
+    width: 30%
+    }
+select{
+    color: #6699ff;
+    border: 4px solid #6699ff;
+}
+form{
+    margin-top: 2em;
+}
+a img{
+    position: relative;
+    width:70%;
+    padding: 20px;
+    display: block;
+    margin: auto;
+}
+.helptext{
+    color:#6699ff;
+}
+textarea{
+    width:100%;
+    color: #6699ff;
+    border: 3px solid #6699ff;
+    margin-top: 0.5em;
+}
+.col-sm-10 div[id='name']{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left: 0;
+    position: fixed;
+    background-color: white;
+}
+.errorlist li{
+    color:red;
+    font-weight: bold;
+}
+input[type="submit"]{
+    margin-top: 1em;
+    color: white;
+    background-color: red;
+}
+input[type="submit"]:hover,input[type="submit"]:focus{
+    background-color: white;
+    color:red;
+}
+button[type="submit"]{
+    margin-top: 1em;
+    color: white;
+    background-color: red;
+}
+button[type="submit"]:hover,button[type="submit"]:focus{
+    background-color: white;
+    color:red;
+}
+input[id="id_username"],input[id="id_email"],input[id="id_first_name"],input[id="id_last_name"],input[id="id_password"],input[id="id_password1"],input[id="id_password2"],input[id="id_date_debut"],input[id="id_date_fin"],input[id="id_email"],input[id="id_new_password1"],input[id="id_new_password2"]{
+    color: #6699ff;
+    border: 3px solid #6699ff;
+    margin-top: 0.5em;
+}

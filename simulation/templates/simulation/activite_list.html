@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Liste des activités</h1>
+    <p> Voici la liste des activités programmées durant le séminaire. En choisisant un élèment de la liste, vous aurez accès à des informations concernant l'activité.</p>
+    {% if activite_list %}
+    <ul>
+
+      {% for activite in activite_list %}
+      <li>
+        <a href="{{ activite.get_absolute_url }}">{{ activite.nom_activite }}</a> 
+		</li>
+		<hr>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>Pas d'activite pour le moment.</p>
+    {% endif %}       
+{% endblock %}

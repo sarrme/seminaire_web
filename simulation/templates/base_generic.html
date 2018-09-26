@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  
+  {% block title %}<title>Séminaire consultants 2018</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+  <!-- Add additional CSS in static file -->
+   {% load static %}
+   <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet"> 
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-2">
+      {% block sidebar %}
+      <ul class="sidebar-nav">
+          <li><a href="{% url 'index' %}">Page d'accueil</a></li>
+		  <li><a href="{% url 'entreprises' %}">Entreprises</a></li>
+          <li><a href="{% url 'activites' %}">Activités</a></li>
+		  {% if user.is_authenticated %}
+     <span class='userme'><em>Utilisateur:</em>   <strong>{{ user.get_username }}</strong></span>
+     <li><a href="{% url 'logout'%}?next={{request.path}}">Se déconnecter</a></li>   
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Se connecter</a></li>   
+   {% endif %} 
+      </ul>
+     {% endblock %}
+      </div>
+      <div class="col-sm-10 ">
+      {% block content %}{% endblock %}
+	  {% block pagination %}
+  {% if is_paginated %}
+      <div class="pagination">
+          <span class="page-links">
+              {% if page_obj.has_previous %}
+                  <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">Précédente</a>
+              {% endif %}
+              <span class="page-current">
+                  Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}.
+              </span>
+              {% if page_obj.has_next %}
+                  <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">Suivante</a>
+              {% endif %}
+          </span>
+      </div>
+  {% endif %}
+{% endblock %} 
+      </div>
+    </div>
+
+  </div>
+  <footer>
+  <p>
+  Merci de nous contacter en cliquant sur ce lien: <a href="mailto:seminaire.consultants@gmail.com?&subject=Des%20suggestions&body=Mettre%20vos%20suggestions%20ici">
+  Envoyer des suggestions.
+</a>
+  </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Liste des entreprises</h1>
+<p> Voici la liste des entreprises participantes au séminaire consultants. En choisisant un élèment de la liste, vous aurez accès à des informations concernant l'entreprise.</p>
+{% if entreprise_list %}
+    <ul>
+        
+      {% for entreprise in entreprise_list %}
+      <li>
+        <a href="{{ entreprise.get_absolute_url }}">{{ entreprise.nom_entreprise }}</a> 
+		</li>
+       <hr>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>Pas d'entreprise pour le moment.</p>
+    {% endif %}       
+{% endblock %}

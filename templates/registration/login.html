@@ -1,0 +1,46 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+<p>Vous devez entrer les bonnes valeurs pour se connecter.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Votre compte n'a pas accès à cette page. Pour continuer,
+    Connectez vous avec un compte ayant accès.</p>
+    {% else %}
+    <h2>Connectez vous pour ajouter un commentaire.</h2>
+    {% endif %}
+{% endif %}
+{% load i18n %}
+{% language 'fr' %}
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+<table>
+<tbody>
+<tr>
+
+  <th>{{ form.username.label_tag }}</th>
+  <td>{{ form.username }}</td>
+</tr>
+<tr>
+  <th>{{ form.password.label_tag }}</th>
+  <td>{{ form.password }}</td>
+</tr>
+{% endlanguage %}
+</tbody>
+</table>
+<div>
+  <input type="submit" value="se connecter" />
+  <input type="hidden" name="next" value="{{ next }}" />
+</div>
+</form>
+<br>
+<br>
+<br>
+
+<p><a href="{% url 'password_reset' %}">mot de passe oublié?</a></p>
+
+{% endblock %}

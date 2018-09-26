@@ -1,0 +1,34 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Activité: {{ activite.nom_activite }}</h1>
+  <article>
+    {% load static %}
+   {% with 'images/'|add:activite.nom_activite|add:'.jpg' as image_static %}
+ <a title='Activite {{ activite.nom_activite }}'><img src="{% static image_static %}"></a>
+ {% endwith %}
+  <span>{{ activite.description_activite |safe}}</span>
+  {% if user.is_authenticated %}
+<hr>
+<div style="margin-left:20px;margin-top:20px">
+ <h4>Commentaires:</h4>
+<br>
+{% for comment in activite.commentaire_set.all %}
+<p>
+
+<em>Auteur: {{comment.auteur}} _(date: {{comment.date}} )</em> - {{comment.description}}
+
+</p>
+{%endfor%}
+{% endif %} 
+<hr>
+{% if user.is_authenticated %}
+<p><a href="{% url 'blog-comment' activite.pk %}">Ajouter un commentaire</a> </p>
+{% else %}
+  <p><a href="{% url 'login'%}?next={{request.path}}">Se connecter</a></p>
+  <br>
+  <p><em> pour voir et ajouter des commentaires.</em></p>
+{% endif %} 
+</div>
+</article>
+{% endblock %}

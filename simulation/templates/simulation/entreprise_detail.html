@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Entreprise: {{ entreprise.nom_entreprise }}</h1>
+  <article>
+   {% load static %}
+   {% with 'images/'|add:entreprise.nom_entreprise|add:'.jpg' as image_static %}
+ <a title='Entreprise {{ entreprise.nom_entreprise }}'><img src="{% static image_static %}"></a>
+ {% endwith %}
+  <span>{{ entreprise.description_entreprise |safe}}</span>
+</article>
+{% endblock %}
