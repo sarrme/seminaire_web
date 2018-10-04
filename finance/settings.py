@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hb0fe#qwz#4_wt&c^6=q5w^pt3hgj3xsn(sw!hgy9qvve-dgy='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['intense-wildwood-14279.herokuapp.com','seminaire-consultants.cf','www.seminaire-consultants.cf']
 
