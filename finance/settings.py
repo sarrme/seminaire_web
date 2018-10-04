@@ -25,7 +25,7 @@ SECRET_KEY = 'hb0fe#qwz#4_wt&c^6=q5w^pt3hgj3xsn(sw!hgy9qvve-dgy='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['seminaire-consultants.cf','www.seminaire-consultants.cf','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['seminaire-consultants.cf','www.seminaire-consultants.cf','localhost','127.0.0.1','intense-wildwood-14279.herokuapp.com']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'seminaire.consultants@gmail.com'
