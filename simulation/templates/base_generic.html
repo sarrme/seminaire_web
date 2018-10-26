@@ -47,7 +47,7 @@
                   <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">Précédente</a>
               {% endif %}
               <span class="page-current">
-                  Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}.
+                  Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
               </span>
               {% if page_obj.has_next %}
                   <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">Suivante</a>
