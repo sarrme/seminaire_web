@@ -28,8 +28,9 @@
 		  <li><a href="{% url 'entreprises' %}">Entreprises</a></li>
           <li><a href="{% url 'activites' %}">Activités</a></li>
 		  {% if user.is_authenticated %}
-     <span class='userme'><em>Utilisateur:</em>   <strong>{{ user.get_username }}</strong></span>
-     <li><a href="{% url 'logout'%}?next={{request.path}}">Se déconnecter</a></li>   
+     
+     <li><a href="{% url 'logout'%}?next={{request.path}}">Se déconnecter</a></li> 
+    <span class='userme'><em>Utilisateur:</em>   <strong>{{ user.get_username }}</strong></span>     
    {% else %}
      <li><a href="{% url 'login'%}?next={{request.path}}">Se connecter</a></li>   
    {% endif %} 

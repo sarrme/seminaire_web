@@ -60,9 +60,7 @@ footer p{
     padding: 10px;
     text-shadow:0.5px 0.5px 0.5px black; 
     font-size: 1.2em;
-    position: absolute;
-    bottom: -2em;
-    left:0;
+
 }
 .userme em{
     color:#66ccff;
