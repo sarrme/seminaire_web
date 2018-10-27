@@ -253,6 +253,7 @@ input[id="id_username"],input[id="id_email"],input[id="id_first_name"],input[id=
     display:inline-block;
     width: 100%;
     text-align: center;
+    font-weight: bold;
     
 }
 
@@ -262,4 +263,5 @@ input[id="id_username"],input[id="id_email"],input[id="id_first_name"],input[id=
     color: red;
 
     border: 3px solid red;
+    color: #6699ff;
 }
