@@ -237,7 +237,7 @@ input[id="id_username"],input[id="id_email"],input[id="id_first_name"],input[id=
     color: white;
     text-align: center;
     width: 20%;
-    padding: 0.5em;
+    padding: 0.7em;
     border: 3px solid red;
     
 }
