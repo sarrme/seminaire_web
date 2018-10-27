@@ -247,15 +247,14 @@ input[id="id_username"],input[id="id_email"],input[id="id_first_name"],input[id=
 
 .pagination .page-current{
     display:inline-block;
+    width: 90%;
     text-align: center;
-    width: 60%;
+    
 }
 
 .pagination a:hover,.pagination a:focus{
     text-decoration: none;
     background-color: white;
     color: red;
-}
-.empty{
-    width: 20%;
+    border: 3px solid red;
 }
