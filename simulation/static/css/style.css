@@ -230,22 +230,19 @@ input[id="id_username"],input[id="id_email"],input[id="id_first_name"],input[id=
 .pagination{
     width: 100%;
 }
-.pagination a:first-child{
+.pagination a{
     display: inline-block;
     background-color: red;
-    float: left;
     color: white;
     text-align: centre;
     width: 20%;
 }
+.pagination .previous{
+    float: left;
+}
 
-.pagination a:nth-child(3){
+.pagination .next{
     float: right;
-    display: inline-block;
-    background-color: red;
-    color: white;
-    text-align: center;
-    width: 20%;
 }
 
 .pagination .page-current{
@@ -258,4 +255,5 @@ input[id="id_username"],input[id="id_email"],input[id="id_first_name"],input[id=
 text-decoration: none;
 background-color: white;
 color: red;
+
 }
